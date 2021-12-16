@@ -151,11 +151,13 @@
 	
 					<hr style="background-color: rgb(43, 203, 140);">
 	
-					<!--검색으로 받아온 Element 리스트-->
-					<ul id="placesList"></ul>
+					<div class="searchlist">
+						<!--검색으로 받아온 Element 리스트를 표시할 ul-->
+						<ul id="placesList"></ul>
 		
-					<!--페이지 구분-->
-					<div id="pagination"></div>
+						<!--페이지 구분을 표시 할 div-->
+						<div id="pagination"></div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -216,23 +218,26 @@
 				<a href="#" class="sidebar_close_btn" onclick="closeSidebar()">&times;</a>
 				<div id="menu_wrap" class="bg_white" style="padding-left: 15px;">
 				<!-- 비상 연락처 설정 -->
-				<form class="pathsearch">
+				<div class="emergency_contact">
 					<div style="float: left; margin-bottom: 5px;color: rgb(43, 203, 140);">
-						비상전화<br>
+						<b>비상전화</b>
+						<br>
 						<img src="assets/dot.png">
 						<input type="tel" 
 								id="callnumb" name="callnumb" 
-								value="112">
+								placeholder="전화번호('-'없이 입력)">
 					</div>
 					<div style="float: left; margin-bottom: 5px;color: rgb(43, 203, 140);">
-						비상문자<br>
+						<b>비상문자</b>
+						<br>
 						<img src="assets/dot.png">
 						<input type="tel"
 								id="smsnumb" name="smsnumb" 
-								value="010-0000-0000">
+								placeholder="전화번호('-'없이 입력)">
 					</div>
 					<div style="float: left;color: rgb(43, 203, 140);">
-						문자내용<br>
+						<b>문자내용</b>
+						<br>
 						<div style="float: left; margin-right: 5px;color: rgb(43, 203, 140);">
 							<img src="assets/dot.png">
 						</div>
