@@ -1,0 +1,507 @@
+body {
+    margin: 0;
+    padding: 0;
+     font-family:'Nanum Gothic Coding', sans-serif;
+}
+.radius_border {
+    border: 1px solid #919191;
+    border-radius: 5px;
+}
+
+.custom_control span {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.gps_btn {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 36px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+
+.gps_btn span img {
+    width: 20px;
+    height: 20px;
+    padding: 7px 0 4px 0;
+    border: none;
+}
+
+.sidebar_open_btn {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    width: 60px;
+    height: 50px;
+    padding-top: 5px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    font-size: 30px;
+    color:rgb(34, 204, 140);
+    font-family: 'Times New Roman', Times, serif;
+}
+.sidebar_open_btn:hover {
+    background:rgb(34, 204, 140);
+    color: white;
+    transition: 0.3s;
+}
+
+.sidebar_open_btn span img {
+    margin-top: 2px;
+    width: 50px;
+    height: 40px;
+}
+
+/*마커 선택 확인 버튼*/
+#checkbtn {
+    background-color: rgb(34, 204, 140);
+
+    color:#fff;
+ 
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.zoom_btn span {
+    width: 36px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.zoom_btn {
+    position: absolute;
+    top: 120px;
+    right: 30px;
+    width: 36px;
+    height: 80px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+
+.zoom_btn span img {
+    width: 15px;
+    height: 15px;
+    padding: 12px 0;
+    border: none;
+}
+
+.zoom_btn span:first-child {
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.siren_btn {
+    position: absolute;
+    bottom: 220px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+
+.siren_btn span img {
+    width: 30px;
+    height: 30px;
+    padding: 8px 0;
+    border: none;
+}
+
+.call_btn {
+    position: absolute;
+    bottom: 160px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+.call_btn span img {
+    width: 30px;
+    height: 30px;
+    padding: 9px 0;
+    border: none;
+}
+
+.sms_btn {
+    position: absolute;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 1;
+    background-color: #f5f5f5;
+}
+.sms_btn span img {
+    width: 30px;
+    height: 30px;
+    padding: 9px 0;
+    border: none;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
+
+#sidebar {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    border: 1px solid #919191;
+  }
+
+/*마커 선택 사이드바*/
+#subSidebar_2{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    color:rgb(34, 204, 140);
+    font-weight: bold;
+}
+  
+.subSidebar a, .subSidebar p{
+    padding: 8px 8px 8px 12px;
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(34, 204, 140);
+    display: block;
+    transition: 0.3s;
+  }
+ 
+
+.sidebar_close_btn{
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(34,204,140);
+    cursor: pointer;
+}
+
+.menu {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(34,204,140);
+    cursor: pointer;
+}
+
+.menu img {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+}
+.menu:hover{
+    background: rgb(34, 204, 140);
+    color: white;
+}
+
+.subSidebar {
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 70px;
+    background-color: white;
+    overflow: hidden;
+    transition: 0.5s;
+    padding-top: 30px;
+  }
+
+.contents {
+    width: 280px;
+}
+
+
+  #intro {
+    /*그라데이션 배경*/
+    font-family: "Jua";
+    background: #114357;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #DEF6CD, #C4F1DF);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #DEF6CD, #C4F1DF);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /*중앙 정렬*/
+    justify-content: center;
+    align-items: center;
+    /* 절대위치 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*아이템들을 세로 방향으로 배치*/
+    flex-direction: column;
+    z-index: 3;
+}
+.title {
+        margin-bottom: 40px;
+        font-size: 5em;
+        color: white;
+    }
+
+
+/*길찾기 Style*/
+.map_wrap, .map_wrap * {
+    margin:0;
+    padding:0;
+    font-family:'Malgun Gothic',dotum,'돋움',sans-serif;
+    font-size:12px;
+}
+.map_wrap a, .map_wrap a:hover, .map_wrap a:active{
+    color:#000;
+    text-decoration: none;
+}
+.map_wrap {
+    position:relative;
+    width:100%;
+    height:500px;
+}
+#menu_wrap {
+    position:relative;
+    width:246px;
+    overflow-y:hidden;
+    background:rgba(43, 203, 140, 0.1);
+    padding: 20px;
+    margin: 10px;
+    z-index: 1;
+    font-size:12px;
+    border-radius: 10px;
+    
+}
+.bg_white {
+    background:#fff;
+}
+#menu_wrap hr {
+    display: block;
+    height: 1px;
+    border: 0; 
+    border-top: 2px solid #5F5F5F;
+    margin:3px 0;
+}
+#menu_wrap .option{
+    text-align: center;
+}
+#menu_wrap .option p {
+    margin:10px 0;
+}  
+#menu_wrap .option button {
+    margin-left:5px;
+}
+#placesList li {
+    list-style: none;
+}
+#placesList .item {
+    position:relative;
+    border-bottom:1px solid #888;
+    overflow: hidden;
+    cursor: pointer;
+    min-height: 65px;
+}
+#placesList .item span {
+    display: block;
+    margin-top:4px;
+}
+#placesList .item h5, #placesList .item .info {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#placesList .item .info {
+    padding:10px 0 10px 10px;
+}
+#placesList .info .gray {
+    color:#8a8a8a;
+}
+#placesList .info .jibun {
+    padding-left:26px;
+    background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/places_jibun.png) no-repeat;
+}
+#placesList .info .tel {
+    color:#009900;
+}
+#placesList .item .markerbg {
+    float:left;
+    position:absolute;
+    width:36px;
+    height:37px;
+    margin:10px 0 0 10px;
+    background:url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png) no-repeat;
+}
+#placesList .item .marker_1 {
+    background-position: 0 -10px;
+}
+#placesList .item .marker_2 {
+    background-position: 0 -56px;
+}
+#placesList .item .marker_3 {
+    background-position: 0 -102px
+}
+#placesList .item .marker_4 {
+    background-position: 0 -148px;
+}
+#placesList .item .marker_5 {
+    background-position: 0 -194px;
+}
+#placesList .item .marker_6 {
+    background-position: 0 -240px;
+}
+#placesList .item .marker_7 {
+    background-position: 0 -286px;
+}
+#placesList .item .marker_8 {
+    background-position: 0 -332px;
+}
+#placesList .item .marker_9 {
+    background-position: 0 -378px;
+}
+#placesList .item .marker_10 {
+    background-position: 0 -423px;
+}
+#placesList .item .marker_11 {
+    background-position: 0 -470px;
+}
+#placesList .item .marker_12 {
+    background-position: 0 -516px;
+}
+#placesList .item .marker_13 {
+    background-position: 0 -562px;
+}
+#placesList .item .marker_14 {
+    background-position: 0 -608px;
+}
+#placesList .item .marker_15 {
+    background-position: 0 -654px;
+}
+#pagination {
+    margin:10px auto;
+    text-align: center;
+}
+#pagination a {
+    display:inline-block;
+    margin-right:10px;
+}
+#pagination .on {
+    font-weight: bold;
+    cursor: default;
+    color:#777;
+}
+.searchbutton {
+    background-color: rgb(34, 204, 140);
+    color: white;
+    font-weight: bold;
+    width: 80px;
+    height: 25px;
+    margin-top: 5px;
+    border: 2px solid rgb(34, 204, 140);
+    border-radius: 5px;
+}
+.searchbutton:hover {
+    background-color: rgb(40, 244, 168);
+}
+
+
+input[type=text] {
+    color: rgb(34, 204, 140);
+    border: 2px solid rgb(34, 204, 140);
+    border-radius: 5px;
+}
+input[type=text]:hover {
+    background-color: aliceblue;
+}
+
+input[type=tel] {
+    color: rgb(34, 204, 140);
+    border: 2px solid rgb(34, 204, 140);
+    border-radius: 5px;
+}
+input[type=tel]:hover {
+    background-color: aliceblue;
+}
+
+
+textarea {
+    color: rgb(34, 204, 140);
+    border: 2px solid rgb(34, 204, 140);
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+    resize: none;
+}
+textarea:hover {
+    background-color: aliceblue;
+}
+
+.emergency_contact {
+    color:rgb(34, 204, 140);
+    float: left;
+    margin-bottom: 5px;
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;   
+    z-index: 2;
+    background-color: rgb(106, 106, 106);
+    opacity: 0.6;
+}
+
+/*인포 윈도우 커스텀*/
+.info-title {
+    display: block;
+    color: rgb(34, 204, 140);
+    width:150px;
+    text-align:center;
+    padding:6px 0;
+}
+
+/*더보기란에 띄우는 로고*/
+.logoText {
+    margin-left: 20px; 
+    margin-right: 20px; 
+    line-height: 2; 
+    text-align: center; 
+    font-family: 'jua';
+    color: rgb(34, 204, 140);
+    font-size: 40px;
+}
+
+.searchlist {
+    height: 350px;
+    overflow-y: scroll;
+};
