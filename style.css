@@ -502,6 +502,6 @@ textarea:hover {
 }
 
 .searchlist {
-    height: 350px;
+    height: 100%;
     overflow-y: scroll;
 };
