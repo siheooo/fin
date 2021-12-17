@@ -254,7 +254,7 @@ function current_locationToPath(flag) {
 function letpede() {
     //키워드 검색으로 찾은 마커 지우기
     removeMarker();
-
+    mode = 1
     start = new kakao.maps.LatLng(strY.innerText, strX.innerText)
     end = new kakao.maps.LatLng(dstY.innerText, dstX.innerText);
     map = map;
