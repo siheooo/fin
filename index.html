@@ -360,15 +360,18 @@
         // 출발지와 도착지 객체 생성
         var start = new kakao.maps.LatLng(35.13367784973298, 129.1049204111099);
         var strnm = document.getElementById('strnm');
-			strnm.innerText = sessionStorage.getItem("strnm");
+	var Session_str = document.getElementById('Session_str')
+		Session_str.innerText = sessionStorage.getItem("strnm");
         var strX = document.getElementById('strX');
         var strY = document.getElementById('strY');
 
         var end = new kakao.maps.LatLng(35.132568, 129.091948);
         var dstnm = document.getElementById('dstnm');
-			dstnm.innerText = sessionStorage.getItem("dstnm");
+	var Session_dst = document.getElementById('Session_dst')
+		Session_dst.innerText = sessionStorage.getItem("dstnm");
         var dstX = document.getElementById('dstX');
         var dstY = document.getElementById('dstY');
+
 
 		
 		// 지도 표시
