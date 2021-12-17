@@ -37,7 +37,6 @@ function getCCTV() {
                 
                 //마커에 클릭 이벤트 등록
                 //길찾기 모드에서만 클릭되도록
-                if(mode == 1)
                     kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
 
@@ -73,8 +72,6 @@ function getCCTV() {
                 });
 
                 //마커에 클릭 이벤트 등록
-                //길찾기 모드에서만 클릭되도록
-                if(mode == 1)
                     kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, markerPosition, marker));
 
                 // 마커 이벤트리스너 등록
@@ -146,8 +143,6 @@ function getEmergencyBell(){
                         });
 
                         //마커에 클릭 이벤트 등록
-                        //길찾기 모드에서만 클릭되도록
-                        if(mode == 1)
                             kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
             
                         //인포윈도우 생성
@@ -212,8 +207,6 @@ function getPolice(){
             });
 
 
-            //길찾기 중일 때만 마커에 클릭 이벤트 등록
-            if(mode == 1)
                 kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, markerPosition, marker));
 
             var infoWindow = new kakao.maps.InfoWindow({
@@ -287,8 +280,6 @@ function getfireStation(){
                                 clickable: true,
 							});
                             // 마커에 클릭 이벤트 등록
-                            //길찾기 모드에서만 클릭되도록
-                            if(mode == 1)
                                 kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
 							// 마커 추가
@@ -339,8 +330,6 @@ function getLamp(){
                         content: '<div class="info-title">보안등</div>',// 정보창에 이름 표시
                     });
 
-                    //길찾기 중일 때만 마커에 클릭 이벤트 등록
-                    if(mode == 1)
                         kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
                     // 마커 이벤트리스너 등록
@@ -371,9 +360,7 @@ function getLamp(){
                         content: '<div class="info-title">보안등</div>',// 정보창에 이름 표시
                     });
 
-                    //길찾기 중일 때만 마커에 클릭 이벤트 등록
-                    if(mode == 1)
-                        kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
+                    kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
                     // 마커 이벤트리스너 등록
                     kakao.maps.event.addListener(marker, "mouseover", mouseOverListener(map, marker, infoWindow));
@@ -486,10 +473,7 @@ function getConvenience(){
                         // 마커 이벤트리스너 등록
                         kakao.maps.event.addListener(marker, "mouseover", mouseOverListener(map, marker, infoWindow));
                         kakao.maps.event.addListener(marker, "mouseout", mouseOutListener(infoWindow));
-            
-                        //마커에 클릭 이벤트 등록
-                        if(mode == 1)
-                            kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
+                        kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
                         // 마커 추가
                         markers.push(marker);
@@ -566,10 +550,7 @@ function getConvenience(){
                     // 마커 이벤트리스너 등록
                     kakao.maps.event.addListener(marker, "mouseover", mouseOverListener(map, marker, infoWindow));
                     kakao.maps.event.addListener(marker, "mouseout", mouseOutListener(infoWindow));
-        
-                    //마커에 클릭 이벤트 등록
-                    if(mode == 1)
-                        kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
+                    kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
                     // 마커 추가
                     markers.push(marker);
@@ -681,8 +662,6 @@ function getShop24hr(){
                         kakao.maps.event.addListener(marker, "mouseover", mouseOverListener(map, marker, infoWindow));
                         kakao.maps.event.addListener(marker, "mouseout", mouseOutListener(infoWindow));
             
-                        // 마커에 클릭 이벤트 등록
-                        if(mode == 1)
                             kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
                         // 마커 추가
@@ -763,10 +742,7 @@ function getShop24hr(){
                     // 마커 이벤트리스너 등록
                     kakao.maps.event.addListener(marker, "mouseover", mouseOverListener(map, marker, infoWindow));
                     kakao.maps.event.addListener(marker, "mouseout", mouseOutListener(infoWindow));
-        
-                    // 마커에 클릭 이벤트 등록
-                    if(mode == 1)
-                        kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
+                    kakao.maps.event.addListener(marker, 'click', mouseClickListener(check, i, coordinate, marker));
 
                     // 마커 추가
                     markers.push(marker);
